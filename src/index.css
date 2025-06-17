@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import 'tailwindcss';
+
+body {
+  font-family: 'Inter';
+  overflow: hidden;
+}
+
+.game-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.score {
+  font-weight: bold;
+  color: white;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.lives-hint {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lives-hint span {
+  font-size: 30px;
+}
+
+.hint-button {
+    top: 300px;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 35px;
+}
+
+.hint-button:hover:not(:disabled) {
+  background-color: #4a526b;
+}
+
+.hint-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.word-display {
+  margin: 30px 0;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.letter-box {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  font-weight: bolder;
+  margin: 0 5px;
+  color: white;
+}
+
+.hint-display {
+  margin-top: 180px;
+  margin-right: 100px;
+  padding: 12px;
+  background-color: #565F7E;
+  border-radius: 5px;
+  font-style: italic;
+  font-weight: bolder;
+  font-size: 22px;
+  color: white;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.keyboard {
+  margin: 20px 0;
+  background-color: #2D3242;
+  padding: 20px;
+  border-radius: 14px;
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  gap: 5px;
+}
+
+.keyboard-key {
+  width: 80px;
+  height: 80px;
+  font-size: 28px;
+  color: white;
+  background-color: #565F7E;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bolder;
+  margin: 5px;
+}
+
+.keyboard-key:hover:not(:disabled) {
+  background-color: #4a526b;
+}
+
+.keyboard-key:disabled {
+  cursor: not-allowed;
+}
+
+.keyboard-key.correct {
+  background-color: #4FB145;
+}
+
+.keyboard-key.wrong {
+  background-color: #B41515;
+}
+
+.game-status {
+  font-size: 22px;
+  color: white;
+  position: absolute;
+  right: 0;
+  margin-right: 50px;
+  margin-bottom: 220px;
+  gap: 20px;
+}
+
+.won-message {
+  color: #4FB145;
+}
+
+.lost-message {
+  color: #B41515;
+}
+
+.play-again-button {
+  padding: 10px 20px;
+  font-size: 30px;
+  padding: 10px;
+  background-color: #4FB145;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.play-again-button:hover {
+  background-color: #3d9a35;
+}
